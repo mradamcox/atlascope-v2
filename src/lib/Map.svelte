@@ -326,7 +326,8 @@
       "overlay",
       urlParams.view && urlParams.overlay
         ? urlParams.overlay
-        : instanceVariables.defaultStartLocation.overlayLayerId
+        // Use the first atlas in the list as default overlay for now...
+        : $allLayers[0].properties.identifier
     );
 
     map = new Map({

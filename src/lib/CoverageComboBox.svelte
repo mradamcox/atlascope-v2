@@ -14,6 +14,13 @@
     ),
   );
 
+  let customParams = new URL(document.location.toString()).searchParams;
+  const oimLocale = customParams.get("locale")
+  const oimHost = customParams.get("host") ? customParams.get("host") : "https://oldinsurancemaps.net"
+  if (oimLocale) {
+    instanceVariables.coverageDescriptiveList = `${oimHost}/atlascope/coverages/${oimLocale}/`
+  }
+
   async function fetchCoverage() {
     let r = await fetch(instanceVariables.coverageDescriptiveList);
     let d = await r.json();

@@ -61,6 +61,14 @@
     $appState.tour.active = true;
   }
 
+  // Pull OldInsuranceMaps.net content if override param in URL
+  let customParams = new URL(document.location.toString()).searchParams;
+  const oimLocale = customParams.get("locale")
+  const oimHost = customParams.get("host") ? customParams.get("host") : "https://oldinsurancemaps.net"
+  if (oimLocale) {
+    instanceVariables.historicLayersFootprintsFile = `${oimHost}/atlascope/footprints/${oimLocale}/`
+  }
+
   // When the app is mounted, first thing we need to do is load the footprints file
   // We stort it by year and then write it to the `allLayers` store which can be accessed
   // from any module
