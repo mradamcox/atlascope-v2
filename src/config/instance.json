@@ -1,7 +1,7 @@
 {
     "baseURL": "https://atlascope.org",
-    "name": "Boston",
-    "tagline": "is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time",
+    "name": "OldInsuranceMaps - DEMO",
+    "tagline": "is a hack example of using Atlascope that dymanically pulls historical map layers from OldInsuranceMaps.net. Add ?locale=new-orleans-la to the URL for maps of New Orleans, La. Select \"Coverage includes...\" to begin exploring. Try any other city's slug in the URL to see if there are maps available there..",
     "geographicCoverage": "the Boston metropolitan area",
     "institutionalShortName": "Leventhal Map & Education Center",
     "institutionalCredit": "A project of the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
@@ -12,7 +12,7 @@
         42.6132
     ],
     "defaultStartLocation": {
-        "name": "BPL",
+        "name": "(use select below)",
         "center": [
             -71.07733477136398,
             42.34962571323688
